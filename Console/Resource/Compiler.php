@@ -11,7 +11,7 @@ declare(strict_types=1);
 
 namespace Weline\Theme\Console\Resource;
 
-use Weline\CacheManager\Console\Cache\Clear;
+use Weline\Framework\Cache\Console\Cache\Clear;
 use Weline\Framework\Manager\ObjectManager;
 use Weline\Framework\Output\Cli\Printing;
 use Weline\Framework\Resource\CompilerInterface;
