@@ -9,7 +9,7 @@
 
 namespace Weline\Theme\Setup;
 
-use Weline\Framework\Database\Connection\Api\Sql\TableInterface;
+use Weline\Framework\Database\Api\Db\TableInterface;
 use Weline\Framework\Database\Db\Ddl\Table\Create;
 use Weline\Framework\Setup\Data;
 use Weline\Framework\Setup\InstallInterface;

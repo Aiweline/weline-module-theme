@@ -13,7 +13,6 @@ use Weline\Framework\App;
 use Weline\Framework\App\Env;
 use Weline\Framework\Cache\CacheInterface;
 use Weline\Framework\Database\Api\Db\TableInterface;
-use Weline\Framework\Database\Db\Ddl\Table\Create;
 use Weline\Framework\Database\Model;
 use Weline\Framework\Manager\ObjectManager;
 use Weline\Framework\Setup\Data\Context;
@@ -194,54 +193,54 @@ class WelineTheme extends Model
                 '主题表'
             )->addColumn(
                 'id',
-                Create::column_type_INTEGER,
+                TableInterface::column_type_INTEGER,
                 11,
-                'primary key NOT NULL AUTO_INCREMENT',
+                'primary key AUTO_INCREMENT',
                 'ID'
             )->addColumn(
                 'module_name',
-                Create::column_type_VARCHAR,
+                TableInterface::column_type_VARCHAR,
                 '60',
                 'UNIQUE NOT NULL ',
                 '主题模块名'
             )->addColumn(
                 'name',
-                Create::column_type_VARCHAR,
+                TableInterface::column_type_VARCHAR,
                 '60',
                 'UNIQUE NOT NULL ',
                 '主题名'
             )->addColumn(
                 'path',
-                Create::column_type_VARCHAR,
+                TableInterface::column_type_VARCHAR,
                 '128',
                 'UNIQUE NOT NULL ',
                 '主题路径'
             )->addColumn(
                 'parent_id',
-                Create::column_type_INTEGER,
+                TableInterface::column_type_INTEGER,
                 11,
                 '',
                 '父级主题'
             )->addColumn(
                 'is_active',
-                Create::column_type_INTEGER,
+                TableInterface::column_type_INTEGER,
                 11,
                 '',
                 '是否激活'
             )->addColumn(
                 'create_time',
-                Create::column_type_DATETIME,
+                TableInterface::column_type_DATETIME,
                 null,
                 'NOT NULL DEFAULT CURRENT_TIMESTAMP',
                 '安装时间'
             )->addColumn(
                 'update_time',
-                Create::column_type_DATETIME,
+                TableInterface::column_type_DATETIME,
                 null,
                 'NOT NULL DEFAULT CURRENT_TIMESTAMP',
                 '更新时间'
             )->addIndex(
-                Create::index_type_DEFAULT,
+                TableInterface::index_type_DEFAULT,
                 'parent_id',
                 'parent_id'
             )->create();
